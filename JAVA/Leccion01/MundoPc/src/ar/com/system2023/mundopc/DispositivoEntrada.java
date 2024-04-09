@@ -1,7 +1,7 @@
 package ar.com.system2023.mundopc;
 
 /**
-  @author maria
+  @author marianela
  */
 public class DispositivoEntrada { /*creamos la clase padre de DispEntr*/
     private String tipoEntrada;  

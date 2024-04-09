@@ -22,7 +22,7 @@ public class Orden {
             this.computadora[this.cotadorComputadora++] = computadora;
         }
         else{
-            System.out.println("Has superado el límite: "+Orden.MAX_COMPUTADORAS);
+            System.out.println("Has superado el limite: "+Orden.MAX_COMPUTADORAS);
         }
     }
     //Método mostrar Orden
