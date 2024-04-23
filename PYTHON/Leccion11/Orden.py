@@ -15,7 +15,7 @@ class Orden:
     def calcular_total(self):
         total = 0 #Variable temporal
         for producto in self._productos:
-            total += producto.precio()
+            total += producto.precio
         return total
 
     def __str__(self):

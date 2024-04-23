@@ -1,4 +1,4 @@
-#DESDE ACÁ MARIANELA
+
 class Producto:
     contador_productos = 0 #Variable de clase
 
@@ -17,7 +17,7 @@ class Producto:
         self._nombre = nombre
 
     @property
-    def precio(self, precio):
+    def precio(self):
         return self._precio
 
     @precio.setter
@@ -33,4 +33,3 @@ if __name__ == '__main__':
     producto2 = Producto('Pantalon', 150.00)
     print(producto2)
 
-#HASTA ACÁ MARIANELA
