@@ -5,7 +5,6 @@ import domain.*;
 
 public class TestConversionObjetos {
     public static void main(String[] args) {
-       
         Empleado empleado;
         empleado = new Escritor("Juan", 5000, TipoEscritura.CLASICO); //Le pasamos los parametros a la clase hija
         System.out.println("empleado = " + empleado);
@@ -14,7 +13,7 @@ public class TestConversionObjetos {
         
         //DOWNCASTING
         //((Escritor)empleado).getTipoEscritura(); //Hay dos opciones: 1
-        Escritor escritor = (Escritor)empleado; //2
+        //Escritor escritor = (Escritor)empleado; //2
         escritor.getTipoEscritura();
         
         
