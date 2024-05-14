@@ -14,7 +14,7 @@ archivo = open('prueba.txt', 'r', encoding='utf8') #en los () especificamos la r
 
 # ANEXAMOS INFORMACION, COPIAMOS A OTRO:
 
-archivo2 = open('prueba.txt', 'a', encoding='utf8')
+archivo2 = open('copia.txt', 'w', encoding='utf8')
 archivo2.write(archivo.read())
 archivo.close()
 archivo2.close()
