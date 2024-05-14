@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página Práctica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -12,26 +12,54 @@
 </head>
 
 <body>
-
-    <img id="photo-image" width=500 height=300 aligne="center" title="foto Nier-Automata-2B-mini"
-        alt="Imagen referencia Nier" src="img\Nier-Automata-2B-mini.jpg">
+    <figure>
+        <img id="photo-image" width=500 height=300 aligne="center" title="foto Nier-Automata-2B-mini"
+            alt="Imagen referencia Nier" src="img\Nier-Automata-2B-mini.jpg">
+    </figure>
     <header>
         <h1>Marianela Purretta</h1>
         <h3>Mis tecnologías favoritas</h3>
-        <ul type="1" start="10">
+        <ol type="1" start="10">
             <li value="1">PHOTOSHOP</li>
             <li>LIGHTROOM</li>
             <li>PREMIERE PRO</li>
+        </ol>
+        <ul>
+            <li>BODAS</li>
+            <li>15 AÑOS</li>
+            <li>EVENTOS</li>
         </ul>
     </header>
-    <table></table>
+    <table border="1">
+        <tr>
+            <th>EVENTO</th>
+            <th>PRECIO</th>
+        </tr>
+        <tr>
+            <th>BODAS</th>
+            <th>$400.000</th>
+        </tr>
+        <tr>
+            <th> 15 AÑOS</th>
+            <th>$400.000</th>
+        </tr>
+    </table>
+
+    <h1>CONTRATACIONES</h1>
+    <p><strong>BODAS: <meter value="94" min="0" max="100" high="90"></meter></strong></p>
+    <p><strong>15: <meter value="60" min="0" max="100" high="90"></meter></strong></p>
+    <p><strong>SESIONES: <meter value="85" min="0" max="100" high="90"></meter></strong></p>
+    <p><strong>EVENTOS EMPRESARIALES: <meter value="50" min="0" max="100" high="90"></meter></strong></p>
+
     <nav>Para generar la barra de navegación</nav>
     <section></section>
     <aside>Para identificar columnas</aside>
     <article></article>
 
-    <p>Esto es para un párrafo</p>
-    <a></a>
+
+    <footer> Contacto:
+
+    </footer>
     <b>EN NEGRITA</b>
     <style>
         body {
@@ -39,7 +67,7 @@
             background: #010a11;
             background: -webkit-linear-gradient(to right, #000000, #bdc3c7);
             background: linear-gradient(to right, #010b14, #3f1c61);
-            color: rgb(30, 216, 185)
+            color: rgb(7, 138, 116)
         }
 
         h1 {
@@ -51,7 +79,20 @@
         }
 
         p {
-            color: #7943af
+            color: #48444b
+        }
+
+        ol {
+            color: #3e6f99
+        }
+
+        ul {
+            color: #2e84b6
+        }
+
+        table {
+            border-color: #3e6f99;
+            color: rgb(137, 137, 138);
         }
     </style>
 </body>
