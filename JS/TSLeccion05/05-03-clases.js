@@ -20,6 +20,16 @@ class Persona { //CLASE PADRE
     set apellido(apellido) {
         this._apellido = apellido;
     }
+    //Método para imprimir nombre completo
+    nombreCompleto() {
+        return this._nombre + ' ' + this._apellido;
+    }
+    toString() {
+        //Aplicamos polimorfismo o sea = multiples formas en tiempo de ejecucion
+        return this.nombreCompleto();
+        //Em método que se ejecua depende si es una referencia de tipo padre o hija
+    }
+
 }
 
 class Empleado extends Persona { //CLASE HIJA
@@ -34,6 +44,13 @@ class Empleado extends Persona { //CLASE HIJA
     set departamento(departamento) {
         this._departamento = departamento;
     }
+
+    //SOBREESCRITURA
+    nombreCompleto() {
+        return super.nombreCompleto() + ', ' + this._departamento;
+    }
+
+
 }
 //Creamos los objetos
 let persona1 = new Persona('Martín', 'Perez');
@@ -56,4 +73,11 @@ console.log(persona1.apellido);
 
 let empleado1 = new Empleado('María', 'Gimenez', 'Sistemas');
 console.log(empleado1);
-console.log(empleado1.nombre);
+console.log(empleado1.nombreCompleto()); //Llamamos al método de la clase padre es un método heredado
+
+
+//Metodo to sring: Accedemos a atributos y métodos de manera dinámica:
+//Object.prototype.toString
+console.log(empleado1.toString());
+console.log(persona1.toString());
+
