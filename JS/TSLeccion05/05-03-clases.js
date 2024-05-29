@@ -2,9 +2,15 @@
 //let persona3 = new Persona('Carla', 'Ponce');
 
 class Persona { //CLASE PADRE
+
+    static contadorObjetosPersona = 0; //Atributo static
+    email = 'Valor default email'; //Atributo no estático
+
     constructor(nombre, apellido) {
         this._nombre = nombre;
         this._apellido = apellido;
+        Persona.contadorObjetosPersona++;
+        console.log('Se incrementó el contador: ' + Persona.contadorObjetosPersona);
     }
 
     //Agregamos get y set
@@ -28,6 +34,14 @@ class Persona { //CLASE PADRE
         //Aplicamos polimorfismo o sea = multiples formas en tiempo de ejecucion
         return this.nombreCompleto();
         //Em método que se ejecua depende si es una referencia de tipo padre o hija
+    }
+
+    //Agregamos un metodo static
+    static saludar() {
+        console.log('Saludos desde el metodo static');
+    }
+    static saludar2(persona) {
+        console.log(persona.nombre + ' ' + persona.apellido)
     }
 
 }
@@ -81,3 +95,19 @@ console.log(empleado1.nombreCompleto()); //Llamamos al método de la clase padre
 console.log(empleado1.toString());
 console.log(persona1.toString());
 
+//persona1.saludar(); no se usa desde el objeto pero si desde la clase
+Persona.saludar();
+Persona.saludar2(persona1); //Metodo static muestra salida solo en consola
+
+Empleado.saludar();
+Empleado.saludar2(empleado1);
+
+//console.log(persona1.contadorObjetosPersona);
+//ATRIBUTO ESTATICO:(CLASS)
+console.log(Persona.contadorObjetosPersona);
+console.log(Empleado.contadorObjetosPersona);
+
+//ATRIBUTO NO ESTATICO:(OBJETO)
+console.log(persona1.email);
+console.log(empleado1.email);
+//console.log(Persona.email); NO PUEDE ACCEDER DESDE LA CLASE
