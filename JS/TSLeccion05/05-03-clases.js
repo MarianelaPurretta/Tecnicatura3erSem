@@ -3,14 +3,24 @@
 
 class Persona { //CLASE PADRE
 
-    static contadorObjetosPersona = 0; //Atributo static
-    email = 'Valor default email'; //Atributo no estático
+    static contadorPersonas = 0; //Atributo static
+    //email = 'Valor default email'; //Atributo no estático
+
+    static get MAX_OBJ() {
+        return 5;
+    }//Metodo static, genera una constante
 
     constructor(nombre, apellido) {
         this._nombre = nombre;
         this._apellido = apellido;
-        Persona.contadorObjetosPersona++;
-        console.log('Se incrementó el contador: ' + Persona.contadorObjetosPersona);
+        if (Persona.contadorPersonas < Persona.MAX_OBJ) {
+            this.idPersona = ++Persona.contadorPersonas;
+        }
+        else {
+            console.log('Se ha superado el maximo de objetos permitidos');
+        }
+
+        //console.log('Se incrementó el contador: ' + Persona.contadorObjetosPersona);
     }
 
     //Agregamos get y set
@@ -28,7 +38,7 @@ class Persona { //CLASE PADRE
     }
     //Método para imprimir nombre completo
     nombreCompleto() {
-        return this._nombre + ' ' + this._apellido;
+        return this.idPersona + ' ' + this._nombre + ' ' + this._apellido;
     }
     toString() {
         //Aplicamos polimorfismo o sea = multiples formas en tiempo de ejecucion
@@ -111,3 +121,20 @@ console.log(Empleado.contadorObjetosPersona);
 console.log(persona1.email);
 console.log(empleado1.email);
 //console.log(Persona.email); NO PUEDE ACCEDER DESDE LA CLASE
+
+console.log(persona1.toString());
+console.log(persona2.toString());
+console.log(empleado1.toString());
+console.log(Persona.contadorPersonas);
+let persona3 = new Persona('Carla', 'Pertosi');
+console.log(persona3.toString());
+console.log(Persona.contadorPersonas);
+
+console.log(Persona.MAX_OBJ);
+Persona.MAX_OBJ = 10; //No se puede modificar
+console.log(Persona.MAX_OBJ);
+
+let persona4 = new Persona('Franco', 'Diaz');
+console.log(persona4.toString());
+let persona5 = new Persona('Liliana', 'Paz');
+console.log(persona5.toString());
