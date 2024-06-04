@@ -10,13 +10,16 @@ conexion = psycopg2.connect(
 try:
     with conexion:
         with conexion.cursor() as cursor:
-            sentencia = 'SELECT * FROM persona WHERE id_persona = %s'  # Realizamos la consulta
+            sentencia = 'SELECT * FROM persona WHERE id_persona IN %s'  # Realizamos la consulta
             # %s : "placeholder"
-            id_persona = input('Digite un número para el id_persona: ')
+            entrada = input('Digite los id_persona a buscar (separados por coma): ')
+            llaves_primarias = (tuple(entrada.split(', ')),) #Convertimos la entrada en una tupla separada por comas
             #Colocamos la sentencia que queremos llamar
-            cursor.execute(sentencia, (id_persona,)) #Ejecutamos
-            registros = cursor.fetchone()  #Recupera todos (all) registros de la sentencia
-            print(registros)
+            cursor.execute(sentencia, llaves_primarias) #Ejecutamos
+            registros = cursor.fetchall()  #Recupera todos (all) registros de la sentencia
+            for registro in registros:
+                print(registro)
+
 except Exception as e:
     print(f'Ocurrió un error: {e}')
 #Cerramos la bd:
