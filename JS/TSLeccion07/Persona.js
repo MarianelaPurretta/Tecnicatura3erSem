@@ -14,7 +14,7 @@ class Persona {
     }
 
     get nombre() {
-        this._nombre;
+        return this._nombre;
     }
     set nombre(nombre) {
         this._nombre = nombre;
