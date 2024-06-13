@@ -92,3 +92,11 @@
             Apellido: None, 
             Email: None
         
+05:04:53 PM:DEBUG [connection.py:23] Conexion exitosa: <connection object at 0x000001F94347DCF0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+05:06:01 PM:ERROR [connection.py:26] Ocurrio un error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgre"
+
+05:06:01 PM:ERROR [connection.py:26] Ocurrio un error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgre"
+
+05:06:28 PM:DEBUG [connection.py:23] Conexion exitosa: <connection object at 0x000001BEAB5DDCF0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+05:06:58 PM:DEBUG [connection.py:23] Conexion exitosa: <connection object at 0x00000297BC46DCF0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+05:06:58 PM:DEBUG [connection.py:36] Se abrio correctamente el cursor: <cursor object at 0x00000297BC400AC0; closed: 0>
