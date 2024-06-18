@@ -31,3 +31,5 @@
 /JAVA/Leccion07/JavaBeans/build/
 /JAVA/New Folder/ManejoExcepciones1/nbproject/private/
 /JAVA/New Folder/ManejoExcepciones1/build/
+# Ignorar la carpeta node_modules
+node_modules/
