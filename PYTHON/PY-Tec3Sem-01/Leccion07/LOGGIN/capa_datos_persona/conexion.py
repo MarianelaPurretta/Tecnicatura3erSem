@@ -1,8 +1,7 @@
 import psycopg2 as bd
 from logger_base import log
 import sys
-
-class Connection: # Colocamos las credenciales de la db
+class Conexion: # Colocamos las credenciales de la db
     _DATABASE = 'test_bd'
     _USERNAME = 'postgres'
     _PASSWORD = 'admin'
@@ -42,5 +41,5 @@ class Connection: # Colocamos las credenciales de la db
             return cls._cursor
 
 if __name__ == '__main__':
-    Connection.obtenerConexion()
-    Connection.obtenerCursor()
+    Conexion.obtenerConexion()
+    Conexion.obtenerCursor()
