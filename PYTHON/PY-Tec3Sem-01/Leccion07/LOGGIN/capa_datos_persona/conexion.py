@@ -20,10 +20,6 @@ class Conexion:  # Colocamos las credenciales de la db
         log.debug(f'Conexion obtenida del pool: {conexion}')
         return conexion
 
-    @classmethod  #Metodo obtenerCursor
-    def obtenerCursor(cls):
-        pass
-
     # OBTENER POOL DE CONEXIONES:
     @classmethod
     def obtenerPool(cls):
