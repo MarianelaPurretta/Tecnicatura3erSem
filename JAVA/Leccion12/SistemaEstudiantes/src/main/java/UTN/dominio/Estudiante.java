@@ -21,7 +21,7 @@ public class Estudiante {
     }
 
     //MODIFICAR
-    public Estudiante(int Estudiante, String nombre, String apellido, String telefono, String, email){
+    public Estudiante(int Estudiante, String nombre, String apellido, String telefono, String email){
         this.idEstudiante = idEstudiante;
         this.nombre = nombre;
         this.apellido = apellido;
